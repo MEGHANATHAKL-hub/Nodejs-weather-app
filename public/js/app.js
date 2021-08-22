@@ -10,7 +10,7 @@ weather.addEventListener('submit', (event) => {
     const location = search.value;
     result.textContent ='Loading...'
 
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 error.textContent ='Ooops.., Location is invalid or Please enter location again '
